@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles4.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <h1 class="text-center my-4">LeadenHall Analytics</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="year-filter mb-3">
+                    <label for="yearSelect">Select Year:</label>
+                    <select class="form-control" id="yearSelect"></select>
+                </div>
+                <div class="brokers-section">
+                    <h3>Brokers Performance</h3>
+                    <div class="chart-container">
+                        <canvas id="brokersChart"></canvas>
+                    </div>
+                    <div class="top-brokers">
+                        <h4>Top 10 Brokers</h4>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Broker Name</th>
+                                        <th>GWP</th>
+                                        <th>Planned GWP</th>
+                                        <th>Diff %</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="brokersTableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="class-section">
+                    <h3>Business Class Analysis</h3>
+                    <div class="chart-container">
+                        <canvas id="classChart"></canvas>
+                    </div>
+                    <div class="class-analysis">
+                        <h4>Class Details</h4>
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Class of Business</th>
+                                        <th>Class Type</th>
+                                        <th>Business Plan</th>
+                                        <th>Earned Premium</th>
+                                        <th>GWP</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="classTableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="chatbot-container">
+        <div id="chatbot" class="chatbot">
+            <div class="chat-messages">
+                <div class="chat-message">How can I help you?</div>
+                <!-- ... (add more chat messages as needed) ... -->
+            </div>
+            <div class="user-input">
+                <textarea id="userMessage"></textarea>
+                <button id="sendMessage" onclick="sendMessage()">
+                    <img src="send.png" alt="Send Icon">
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

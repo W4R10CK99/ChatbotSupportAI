@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ecf2ff; /* Light Blue Background */
+    color: #333;
+}
+
+h1 {
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #3b5998; /* Dark Blue Heading Container */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.brokers-section,
+.class-section {
+    background-color: #fff; /* White Background */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #3b5998; /* Dark Blue Heading */
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: #ecf2ff; /* Light Blue Heading Background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+h4 {
+    color: #3b5998; /* Dark Blue Heading */
+    margin-bottom: 10px;
+}
+
+.chart-container,
+.table {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.chart-container canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.table th,
+.table td {
+    vertical-align: middle;
+}
+
+.table thead th {
+    background-color: #3b5998; /* Dark Blue Table Header */
+    color: #fff;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #ecf2ff; /* Light Blue Table Background */
+}
+
+.table tbody tr:hover {
+    background-color: #d9e6f2; /* Medium Blue Table Hover Background */
+}
+
+.form-control {
+    border: 1px solid #3b5998; /* Dark Blue Border */
+    border-radius: 5px;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+
+.chatbot {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.chat-message {
+    background-color: #ecf2ff;
+    border-radius: 5px;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.chat-messages {
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.user-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+textarea {
+    flex: 1;
+    border: 1px solid #3b5998;
+    border-radius: 10px;
+    padding: 8px;
+    resize: none;
+    box-sizing: border-box;
+    height: 50px;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+button img {
+    width: 30px;
+    height: 30px;
+}
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 250px; /* Adjust the width as needed */
+    height: 350px; /* Adjust the height as needed */
+    background-color: #93c3fa; /* Chatbot background color */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(244, 11, 11, 0.1);
+    display: flex;
+    flex-direction: column;
+}
